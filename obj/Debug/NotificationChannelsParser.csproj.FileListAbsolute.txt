@@ -1,0 +1,7 @@
+C:\Users\Songhorn\source\repos\NotificationChannelsParser\NotificationChannelsParser\obj\Debug\NotificationChannelsParser.csproj.AssemblyReference.cache
+C:\Users\Songhorn\source\repos\NotificationChannelsParser\NotificationChannelsParser\obj\Debug\NotificationChannelsParser.csproj.CoreCompileInputs.cache
+C:\Users\Songhorn\source\repos\NotificationChannelsParser\NotificationChannelsParser\bin\Debug\NotificationChannelsParser.exe.config
+C:\Users\Songhorn\source\repos\NotificationChannelsParser\NotificationChannelsParser\bin\Debug\NotificationChannelsParser.exe
+C:\Users\Songhorn\source\repos\NotificationChannelsParser\NotificationChannelsParser\bin\Debug\NotificationChannelsParser.pdb
+C:\Users\Songhorn\source\repos\NotificationChannelsParser\NotificationChannelsParser\obj\Debug\NotificationChannelsParser.exe
+C:\Users\Songhorn\source\repos\NotificationChannelsParser\NotificationChannelsParser\obj\Debug\NotificationChannelsParser.pdb
