@@ -10,11 +10,27 @@ namespace NotificationChannelsParser
     {
         static void Main(string[] args)
         {
+            NotificationChannel Channels;
+            string TempTitle = "";
             NotificationTitle notiTitle = new NotificationTitle();
-            NotificationChannel _Channels = new NotificationChannel();
+            List<NotificationChannel> ChannelLst = new List<NotificationChannel>();
             notiTitle.Input();
-            _Channels = AssignNotification(notiTitle.Title);
-            _Channels.Output();
+            ChannelLst = AssignNotification(notiTitle.Title);
+            int i = 1;
+            foreach (NotificationChannel NotiCH in ChannelLst)
+            {
+                if (i < ChannelLst.Count)
+                {
+                    TempTitle += NotiCH.Channel + ", ";
+                }
+                else
+                {
+                    TempTitle += NotiCH.Channel;
+                }
+                i++;
+            }
+            Channels = new NotificationChannel(TempTitle);
+            Channels.Output();
             Console.ReadLine();         
         }
         public class NotificationTitle
@@ -43,11 +59,9 @@ namespace NotificationChannelsParser
                 Console.WriteLine(Titles);
             }
         }
-        public static NotificationChannel AssignNotification(string NotiTitle)
+        public static List<NotificationChannel> AssignNotification(string NotiTitle)
         {
             List<NotificationChannel> ChannelLst = new List<NotificationChannel>();
-            NotificationChannel Channels;
-            string TempTitle = "";
             string[] TitleLst = NotiTitle.Split(new string[] { "[", "]" }, StringSplitOptions.RemoveEmptyEntries);
             foreach(string s in TitleLst)
             {
@@ -56,20 +70,7 @@ namespace NotificationChannelsParser
                     ChannelLst.Add(new NotificationChannel(s));
                 }
             }
-            int i = 1;
-            foreach(NotificationChannel NotiCH in ChannelLst)
-            {
-                if (i < ChannelLst.Count)
-                {
-                    TempTitle += NotiCH.Channel+", ";
-                }
-                else
-                {
-                    TempTitle += NotiCH.Channel;
-                }
-                i++;
-            }
-            return Channels = new NotificationChannel(TempTitle);
+            return ChannelLst;
         }
         public class NotificationChannel
         {
